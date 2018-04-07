@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Result</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <body>
+        <h1>Result</h1>
+        <div>
+            <p th:text="'Name: ' + ${dataresult.name}"/>
+            <p th:text="'Num: ' + ${dataresult.num}"/>
+            <p th:text="'Time: ' + ${dataresult.primeTime}"/>
+            <p th:text="'Result probably: ' + ${dataresult.probably} + '%'"/>
+        </div>
+        <div>
+            <p th:text="'All data: '"/>
+            <ul>
+                <li th:each="data : ${dataresult.allData}">
+                    <p th:text="${data}"/>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>

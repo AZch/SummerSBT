@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="UTF-8">
+        <title>Main Page</title>
+    </head>
+    <body>
+        <div>
+            <h1>Main Page, please choose action</h1>
+        </div>
+        <div>
+            <p th:text="'Count of data: ' + ${count}"/>
+            <div>
+                <form method="post" action="/upload">
+                    <label>load data: </label>
+                    <input type="submit" value="load data"/>
+                </form>
+            </div>
+            <div>
+                <form method="post" action="/clear">
+                    <label>clear data: </label>
+                    <input type="submit" value="clear data"/>
+                </form>
+            </div>
+            <div>
+                <form method="post" action="/find">
+                    <label>find employee: </label>
+                    <input type="submit" value="find employee"/>
+                </form>
+            </div>
+            <div>
+                <form method="post" action="/check">
+                    <label>check employee: </label>
+                    <input type="submit" value="check employee"/>
+                </form>
+            </div>
+            <p th:text="'info: ' + ${info}"/>
+        </div>
+    </body>
+</html>

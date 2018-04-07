@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Most Time</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <body>
+        <h1>Please enter data</h1>
+        <div>
+            <form action="/resultDayOfWeek" th:object="${datarequest}" method="post">
+                <p>Name: <input type="text" th:field="*{name}" /></p>
+                <p>Day (1 - monday, ..., 7 - sunday): <input type="text" th:field="*{timeInterval}" /> </p>
+                <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+            </form>
+        </div>
+    </body>
+</html>

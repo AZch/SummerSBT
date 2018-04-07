@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Day Of Week</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <body>
+        <h1>Please enter data</h1>
+        <div>
+            <form action="/resultInterval" th:object="${datarequest}" method="post">
+                <p>Name: <input type="text" th:field="*{name}" /></p>
+                <p>Hour in: <input type="text" th:field="*{hourTimeIn}" />  Minute in: <input type="text" th:field="*{minTimeIn}" /></p>
+                <p>Hour out: <input type="text" th:field="*{hourTimeOut}" />  Minute out: <input type="text" th:field="*{minTimeOut}" /></p>
+                <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+            </form>
+        </div>
+    </body>
+</html>

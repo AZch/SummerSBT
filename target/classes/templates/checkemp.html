@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Who check</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <body>
+        <h1>Please enter name or num</h1>
+        <div>
+            <form action="/resulcheck" th:object="${datarequest}" method="post">
+                <p>Name: <input type="text" th:field="*{name}" /></p>
+                <p>Name: <input type="text" th:field="*{num}" /></p>
+                <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+            </form>
+        </div>
+    </body>
+</html>
